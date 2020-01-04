@@ -19,18 +19,8 @@
   "license": "MIT",
   "dependencies": {
     "@types/node": "^13.1.2",
-    "axios": "^0.18.0",
-    "body-parser": "^1.18.3",
-    "cors": "^2.8.5",
-    "express": "^4.16.4",
-    "express-graphql": "^0.8.0",
-    "express-request-proxy": "^2.2.2",
-    "graphql": "^14.2.1",
-    "helmet": "^3.18.0",
-    "method-override": "^3.0.0"
   },
   "devDependencies": {
-    "@types/express": "^4.16.1",
     "@types/jest": "^24.0.12",
     "cross-env": "^5.2.0",
     "eslint": "^5.16.0",
