@@ -2,11 +2,17 @@
     "compilerOptions": {
         "module": "commonjs",
         "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
         "pretty": true,
-        "sourceMap": true,
+        "sourceMap": false,
         "target": "es6",
         "outDir": "./dist",
-        "baseUrl": "./"
+        "baseUrl": "./",
+        "types": [
+            // add node as an option
+            "node",
+            "jest"
+         ]
     },
     "include": [
         "**/*.ts"
