@@ -78,7 +78,7 @@ describe('Builder', () => {
     })
 
     describe('Testing builder with class', () => {
-        it('Testing a computer with no SSD', () => {
+        it('Testing a computer without SSD', () => {
             const computerWithoutSSD =
                 new ComputerBuilderClass('Motherboard A', '1tb', '16gb')
                     .build();
