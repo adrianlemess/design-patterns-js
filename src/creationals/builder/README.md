@@ -40,6 +40,9 @@ Use the Builder pattern when
 - This computer may have offboardGraphic and bluetooth enabled or disabled
 - The computer may have or may not a SSD
 
+## Todo
+- Botar as validações no build  e não na chamada da funcao
+
 ## Credits
 
 - https://sourcemaking.com/design_patterns/builder
