@@ -1,5 +1,6 @@
 export enum PatternsEnum {
     ABSTRACT_FACTORY = '1',
     BUILDER = '2',
-    FACTORY = '3'
+    FACTORY = '3',
+    PROTOTYPE = '4'
 }
