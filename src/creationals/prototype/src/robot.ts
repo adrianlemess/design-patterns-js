@@ -8,15 +8,12 @@ export class Robot implements RobotPrototype {
   creationDate: Date;
 
   constructor(
-    owner: MadScientist,
-    nickname: string,
-    model: string,
-    creationDate: Date
+    data
   ) {
-    this.owner = owner;
-    this.nickname = nickname;
-    this.model = model;
-    this.creationDate = creationDate;
+    this.owner = data.owner;
+    this.nickname = data.nickname;
+    this.model = data.model;
+    this.creationDate = data.creationDate;
   }
 
   clone(): Robot {
