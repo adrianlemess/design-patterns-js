@@ -20,8 +20,7 @@ export class Robot implements RobotPrototype {
   }
 
   clone(): Robot {
-    const robotCloned = Object.assign({}, this);
-    console.log("this.creationDate", this.creationDate);
+    const robotCloned = { ...this };
 
     robotCloned.creationDate = new Date(this.creationDate.getTime());
 
