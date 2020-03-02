@@ -17,7 +17,7 @@ export class Robot implements RobotPrototype {
   }
 
   clone(): Robot {
-    const robotCloned = { ...this };
+    const robotCloned = Object.create(this);
 
     robotCloned.creationDate = new Date(this.creationDate.getTime());
 

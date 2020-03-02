@@ -1,8 +1,9 @@
-import { PatternsEnum } from "./src/patterns.enum";
+import { CreationalPatternsEnum } from "./src/patterns.enum";
 import { startAbstractFactory } from "./src/creationals/abstract-factory";
 import { startBuilder } from "./src/creationals/builder";
 import { startFactory } from "./src/creationals/factory-method";
 import { startPrototype } from "./src/creationals/prototype";
+import { startSingleton } from "./src/creationals/singleton";
 
 const readline = require("readline");
 
@@ -18,21 +19,25 @@ console.log(`
     2 - Builder;
     3 - Factory;
     4 - Prototype;
+    5 - Singleton;
 `);
 console.log("What pattern do you want to execute?");
 rl.on("line", answer => {
   switch (answer) {
-    case PatternsEnum.ABSTRACT_FACTORY:
+    case CreationalPatternsEnum.ABSTRACT_FACTORY:
       startAbstractFactory();
       break;
-    case PatternsEnum.BUILDER:
+    case CreationalPatternsEnum.BUILDER:
       startBuilder();
       break;
-    case PatternsEnum.FACTORY:
+    case CreationalPatternsEnum.FACTORY:
       startFactory();
       break;
-    case PatternsEnum.PROTOTYPE:
+    case CreationalPatternsEnum.PROTOTYPE:
       startPrototype();
+      break;
+    case CreationalPatternsEnum.SINGLETON:
+      startSingleton();
       break;
     default:
       console.log("Option not mapped");
