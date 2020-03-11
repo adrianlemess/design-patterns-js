@@ -25,6 +25,6 @@ export class NewPriceTicketCalculation {
 
   calculate(overweightLuggage, currency: Currency) {
     const result = (this.destination - this.start) * 3.5 + overweightLuggage * 1.5; 
-    return `${currency}${result.toFixed(2)}`;
+    return `${currency} ${result.toFixed(2)}`;
   }
 }
