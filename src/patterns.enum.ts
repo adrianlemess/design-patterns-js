@@ -13,5 +13,11 @@ export enum CreationalPatternsEnum {
 }
 
 export enum StructurePatternsEnum {
-    ADAPTER = '1'
+    ADAPTER = '1',
+    BRIDGE = '2',
+    COMPOSITE = '3',
+    DECORATOR = '4',
+    FACADE = '5',
+    FLYWEIGHT = '6',
+    PROXY = '7'
 }

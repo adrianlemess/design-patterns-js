@@ -9,6 +9,12 @@ import { startFactory } from "./src/creationals/factory-method";
 import { startPrototype } from "./src/creationals/prototype";
 import { startSingleton } from "./src/creationals/singleton";
 import { startAdapter } from "./src/structurals/adapter";
+import { startBridge } from "src/structurals/bridge";
+import { startComposite } from "src/structurals/composite";
+import { startDecorator } from "src/structurals/decorator";
+import { startFacade } from "src/structurals/facade";
+import { startFlyweight } from "src/structurals/flyweight";
+import { startProxy } from "src/structurals/proxy";
 
 const readline = require("readline");
 
@@ -16,18 +22,41 @@ let rl = null;
 
 const startStructuralPatterns = () => {
   console.log(`
-      1 - Adapter
+      1 - Adapter,
+      2 - Bridge,
+      3 - Composite,
+      4 - Decorator,
+      5 - Facade,
+      6 - Flyweight,
+      7 - Proxy
   `);
-  console.log('structurals')
+  console.log("structurals");
   rl.question("What Structural pattern do you want to execute?", answer => {
     switch (answer) {
       case StructurePatternsEnum.ADAPTER:
         startAdapter();
         break;
+      case StructurePatternsEnum.BRIDGE:
+        startBridge();
+        break;
+      case StructurePatternsEnum.COMPOSITE:
+        startComposite();
+        break;
+      case StructurePatternsEnum.DECORATOR:
+        startDecorator();
+        break;
+      case StructurePatternsEnum.FACADE:
+        startFacade();
+        break;
+      case StructurePatternsEnum.FLYWEIGHT:
+        startFlyweight();
+        break;
+      case StructurePatternsEnum.PROXY:
+        startProxy();
+        break;
     }
     rl.close();
     start();
-
   });
 };
 
