@@ -6,7 +6,7 @@ import { SquadCompound } from "./src/squad-compound.component";
 export const startComposite = () => {
   const galaticEmpire = createGalaticEmpireDivision();
 
-  const results = galaticEmpire.executeOrder("Order 66");
+  const results = galaticEmpire.executeOrder("66");
   console.log(results);
 };
 
