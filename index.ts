@@ -9,12 +9,12 @@ import { startFactory } from "./src/creationals/factory-method";
 import { startPrototype } from "./src/creationals/prototype";
 import { startSingleton } from "./src/creationals/singleton";
 import { startAdapter } from "./src/structurals/adapter";
-import { startBridge } from "src/structurals/bridge";
-import { startComposite } from "src/structurals/composite";
-import { startDecorator } from "src/structurals/decorator";
-import { startFacade } from "src/structurals/facade";
-import { startFlyweight } from "src/structurals/flyweight";
-import { startProxy } from "src/structurals/proxy";
+import { startBridge } from "./src/structurals/bridge";
+import { startComposite } from "./src/structurals/composite";
+import { startDecorator } from "./src/structurals/decorator";
+import { startFacade } from "./src/structurals/facade";
+import { startFlyweight } from "./src/structurals/flyweight";
+import { startProxy } from "./src/structurals/proxy";
 
 const readline = require("readline");
 
