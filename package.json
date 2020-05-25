@@ -19,7 +19,8 @@
   "author": "adrianlemess",
   "license": "MIT",
   "dependencies": {
-    "@types/node": "^13.1.2"
+    "@types/node": "^13.1.2",
+    "ts-node": "^8.10.1"
   },
   "devDependencies": {
     "@types/jest": "^24.0.25",
