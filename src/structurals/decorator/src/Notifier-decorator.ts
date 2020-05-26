@@ -1,37 +1,16 @@
-import { Notifier } from "./Notifier";
-import { NotificationType } from "./NotificationTypeEnum";
 import { Contact } from "./Contact";
-import { DefaultNotification } from "./Default-notification";
-import { FacebookNotification } from "./Facebook-notification";
-import { PushNotification } from "./Push-notification";
-import { SlackNotification } from "./Slack-notification";
+import { Notifier } from "./Notifier";
 
-export class NotifierDecorator implements Notifier {
-    private wrapee: Notifier;
-
-    setBaseDecorator(notifier: NotificationType = NotificationType.DEFAULT) {
-        switch(notifier) {
-            case NotificationType.DEFAULT:
-                this.wrapee = new DefaultNotification();
-                break;
-            case NotificationType.FACEBOOK:
-                this.wrapee = new FacebookNotification();
-                break;
-            case NotificationType.PUSH_NOTIFICATION:
-                this.wrapee = new PushNotification();
-                break;
-            case NotificationType.SLACK_NOTIFICATION:
-                this.wrapee = new SlackNotification();
-                break;
-            default:
-                throw new Error('Notification not specified')
-        }
+export abstract class NotifierDecorator implements Notifier {
+    protected wrapee: Notifier;
+    
+    constructor(wrapee: Notifier) {
+        this.wrapee = wrapee;
     }
 
     send(message: string, contact: Contact) {
-        if (!this.wrapee) {
-            this.setBaseDecorator();
+        if (this.wrapee) {
+            this.wrapee.send(message, contact);
         }
-        this.wrapee.send(message, contact);
     }
 }
